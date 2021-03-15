@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/hackflix/static/css/main.1b75f331.chunk.css",
+    "main.js": "/hackflix/static/js/main.a89953e6.chunk.js",
+    "main.js.map": "/hackflix/static/js/main.a89953e6.chunk.js.map",
+    "runtime-main.js": "/hackflix/static/js/runtime-main.4c364a59.js",
+    "runtime-main.js.map": "/hackflix/static/js/runtime-main.4c364a59.js.map",
+    "static/js/2.c4f1cfa6.chunk.js": "/hackflix/static/js/2.c4f1cfa6.chunk.js",
+    "static/js/2.c4f1cfa6.chunk.js.map": "/hackflix/static/js/2.c4f1cfa6.chunk.js.map",
+    "static/js/3.9afafb51.chunk.js": "/hackflix/static/js/3.9afafb51.chunk.js",
+    "static/js/3.9afafb51.chunk.js.map": "/hackflix/static/js/3.9afafb51.chunk.js.map",
+    "index.html": "/hackflix/index.html",
+    "static/css/main.1b75f331.chunk.css.map": "/hackflix/static/css/main.1b75f331.chunk.css.map",
+    "static/js/2.c4f1cfa6.chunk.js.LICENSE.txt": "/hackflix/static/js/2.c4f1cfa6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4c364a59.js",
+    "static/js/2.c4f1cfa6.chunk.js",
+    "static/css/main.1b75f331.chunk.css",
+    "static/js/main.a89953e6.chunk.js"
+  ]
+}
