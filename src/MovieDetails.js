@@ -4,8 +4,11 @@ import axios from 'axios';
 
 const MovieDetails = (props) => {
     const [movie, setMovie] = useState({});
+
     useEffect(() => {
         const { movieID } = props.match.params;
+        //console.log(props.match.params);
+
         axios({
             url: `https://api.themoviedb.org/3/movie/${movieID}`,
             params: {
@@ -17,10 +20,11 @@ const MovieDetails = (props) => {
                 page: '1'
             },
         }).then((res) => {
-            console.log(res.data);
+            //console.log(res.data);
             setMovie(res.data);
         })
     }, [props.match.params]);
+
 
     const { original_title, tagline, overview, poster_path, release_date } = movie;
     return (
@@ -32,7 +36,10 @@ const MovieDetails = (props) => {
                 <p>{overview}</p>
             </div>
             <div className="image">
-                <img src={`http://image.tmdb.org/t/p/w500/${poster_path}`} alt={`Movie poster for ${original_title}`} />
+                {(poster_path) ?
+                    <img src={`http://image.tmdb.org/t/p/w500/${poster_path}`} alt={`Movie poster for ${original_title}`} />
+                    : null
+                }
             </div>
         </div>
     );
