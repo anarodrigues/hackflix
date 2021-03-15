@@ -1,0 +1,80 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body { line-height: 1; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Helvetica';
+  background-color: #000; }
+
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 33px 18px; 
+  display: flex;
+  justify-content: space-between; 
+}
+
+header a {
+  text-decoration: none; 
+}
+
+nav a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+h1 {
+  color: red;
+  font-size: 30px;
+  font-weight: 600; }
+
+h2 {
+  color: #eee;
+  padding-top: 5px;
+  font-size: 23px; 
+}
+
+.description {
+  width: 50%; 
+}
+
+.description h2 {
+  padding: 10px 0px; 
+}
+
+.description p {
+  color: #fff;
+  line-height: 1.5; 
+}
+
+.catalogue {
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+.catalogue img {
+  max-width: 100%; 
+}
+
+.movie {
+  width: 20%; 
+}
+
+.poster {
+  display: flex;
+  width: 93%;
+  margin: 0 auto; 
+}
