@@ -6,11 +6,11 @@ const MovieDetails = (props) => {
     const [movie, setMovie] = useState({});
 
     useEffect(() => {
-        const { movieID } = props.match.params;
+        const { movieId } = props.match.params;
         //console.log(props.match.params);
 
         axios({
-            url: `https://api.themoviedb.org/3/movie/${movieID}`,
+            url: `https://api.themoviedb.org/3/movie/${movieId}`,
             params: {
                 api_key: 'f012df5d63927931e82fe659a8aaa3ac',
                 language: 'en-US',

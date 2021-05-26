@@ -11,13 +11,13 @@ const App = () => {
     <Router basename={process.env.PUBLIC_URL}>
     <div className="App">
         <header>
-          {/* <Link to={`/`}> */}
+          <Link to={`/`}>
             <h1>Hackflix</h1>
-          {/* </Link> */}
+          </Link>
 
         </header>
         <Route exact path="/" component={Catalogue} />
-        <Route exact path="/movie/:movieID" component={MovieDetails} />
+        <Route exact path="/movie/:movieId" component={MovieDetails} />
       </div>
     </Router>
   );
