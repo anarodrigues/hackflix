@@ -7,15 +7,16 @@ import Select from 'react-select';
 import { Link } from 'react-router-dom';
 
 const Catalogue = () => {
+    const currentYear = new Date().getFullYear()+1;
     const [movies, setMovies] = useState([]);
-    const [year, setYear] = useState();
-    const options = [];
-    for (let y = 1941; y <= new Date().getFullYear()+1; y++){
-        options.push({ value: y, label: y });
+    const [year, setYear] = useState(currentYear);
+    const options = [{ value: currentYear, label: currentYear }];
+    for (let y = currentYear - 1; y >= 1941; y--) {
+            options.push({ value: y, label: y });
     }
 
     useEffect(() => {
-        const thisYear = year;
+        
         // After the component has been added to the DOM make our API call...
         axios({
             url: 'https://api.themoviedb.org/3/discover/movie',
@@ -26,7 +27,7 @@ const Catalogue = () => {
                 include_adult: 'false',
                 include_video: 'false',
                 page: 1,
-                primary_release_year: thisYear,
+                primary_release_year: year,
             },
         }).then((res) => {
             const movieResults = res.data.results;
@@ -41,7 +42,12 @@ const Catalogue = () => {
 
 
     return (
-        <>        <Select options={options} onChange={(event) => { handleChange(event) }} />
+        <>
+            <Select
+                options={options}
+                onChange={(event) => { handleChange(event) }}
+                defaultValue={{label: currentYear, value: currentYear}}
+            />
 
             <div className="catalogue">
 
@@ -51,11 +57,18 @@ const Catalogue = () => {
                             // wrap the Link component around each Catalogue image and 
                             // set the "to" attribute to our route's URL path with movie ID stored in our API data 
                         }
-
-
                         <Link to={`/movie/${movie.id}`}>
-                            <img alt={`movie detail ${movie.id}`} src={`http://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                            />
+                            {movie.poster_path ?
+                                <img
+                                    alt={`Poster for movie ${movie.title} from ${year}`}
+                                    src={`http://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                                /> :
+                                <>
+                                    
+                                    <h2>{movie.title}</h2>
+                                    <p>No image available</p>
+                                </>
+                            }
                         </Link>
                     </div>
                 )

@@ -6,20 +6,14 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 
-
 const App = () => {
-  
-
-  
   return (
     <Router basename={process.env.PUBLIC_URL}>
     <div className="App">
         <header>
-          <Link to={`/`}>
+          {/* <Link to={`/`}> */}
             <h1>Hackflix</h1>
-          </Link>
-            
-          
+          {/* </Link> */}
 
         </header>
         <Route exact path="/" component={Catalogue} />
